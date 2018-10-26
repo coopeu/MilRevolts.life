@@ -1,0 +1,52 @@
+<div class="ui basic segment center aligned">
+     <%= image_tag("MilRevolts400.png", :alt => "Mil Revolts", :class => "mbr-navbar__brand-img mbr-brand__img") %>
+     <BR/><BR/><BR/>  
+</div>
+
+<div class="ui relaxed equal width grid">
+  <div class="ui row">
+    <div class="ui six wide column"></div>
+      <div class="ui four wide column segment">
+    
+
+      <h2 class="ui center aligned dividing header teal">
+        <i class="sign in icon"></i>Entra al teu compte
+      </h2>
+
+
+    <div class='ui form'>    
+    <%= simple_form_for(@user, url: session_path(@user)) do |f| %>
+        
+        <div class="field">
+          <%= f.label :email %>
+          <div class="ui left icon input">
+          <%= f.email_field :email, autofocus: true ,placeholder:"Email"%>
+          <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <div class="ui left icon input">
+          <%= f.password_field :password, autocomplete: "off" ,placeholder:"Password"%>
+          <i class="lock icon"></i>
+          </div>
+        </div>
+        <div class="field">        
+         <%= f.input :remember_me, inline_label: 'Sí, en recorda', as: :boolean if devise_mapping.rememberable? %>
+       </div>
+        <div class="ui basic segment center aligned">
+          <%= f.submit "Log in" ,class: "ui submit button teal"%>
+        </div>
+
+      <% end %>
+
+      <h5 class="ui center aligned header teal">
+      Ets nou? <%= link_to 'Registre', new_user_registration_path, :class=>'item' %>  
+      </h5> 
+
+     </div>
+    </div>
+  </div>
+</div>
+
+     <BR/><BR/><BR/>  

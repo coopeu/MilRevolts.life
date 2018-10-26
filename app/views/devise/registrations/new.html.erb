@@ -1,0 +1,45 @@
+<div class="ui basic segment center aligned">
+     <%= image_tag("MilRevolts400.png", :alt => "Mil Revolts", :class => "mbr-navbar__brand-img mbr-brand__img") %>
+     <BR/><BR/><BR/>  
+</div>
+<div class="ui relaxed equal width grid">
+  <div class="ui row">
+    <div class="ui four wide column"></div>
+      <div class="ui six wide column segment">
+    
+
+      <h2 class="ui center aligned dividing header teal">
+       <i class="signup icon teal"></i>Registra't, crea el teu compte.</h2>
+
+       <div class="ui inverted segment">
+        <% if (params[:plan].blank? || params[:plan] == '1') %>
+    		<h3 class="ui center aligned header olive">
+    		<i class="coffee icon olive"></i>Pla BÀSIC</h3>
+        <h4 class="ui center aligned dividing header olive">
+        TOTALMENT GRATIS!<BR/> 
+        <i>Participa en les sortides en moto i al grup de WhatsApp.</i>
+   			</h4></div>
+				<%= render 'form_basic' %>
+        <% end %>
+        <% if params[:plan] == '2' %>
+     		<h4 class="ui center aligned dividing header green">
+     		<i class="copy outline icon green"></i>
+     		"Pla Membre: 2. Participa en les sortides, al WhatsApp i al lloc Web per només 6€ a l'any."
+   			</h4></div>
+				<%= render 'form_membre' %>
+        <% end %>
+        <% if params[:plan] == '3' %>
+    		<h4 class="ui center aligned dividing header teal">
+    		<i class="clipboard outline icon teal"></i>
+    		"Pla Associat: 3. Participa en tot i inclós en l'organització per només 12€ a l'any."
+   			</h4></div>
+				<%= render 'form_associat' %>
+        <% end %>
+
+		</div><!-- six wide -->
+    <div class="ui four wide column"></div>
+	</div><!-- row -->
+</div><!-- grid -->
+
+
+<div><BR/><BR/><BR/><BR/></div>  

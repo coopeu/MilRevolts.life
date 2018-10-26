@@ -1,0 +1,150 @@
+<section class="content-2 simple col-1 col-undefined mbr-parallax-background mbr-after-navbar" id="content5-92" style="background-image: url(<%= asset_path 'bg0001.jpg' %>) ;">
+    <div class="mbr-overlay" style="opacity: 0.65; background-color: rgb(0, 0, 0);"></div>
+    <div class="container">
+        <div class="row">
+            <div>
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3 style='font-size: 52pt; font-weight: 900;'><i>Mil Revolts</i></h3>
+                        <br/>
+                        <h3>Grup motorista</h3>
+                        <div><p>Sortides en moto per Catalunya! <br></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-2 col-4" id="features1-108" style="background-color: rgb(239, 239, 239);">
+    <div class="ui container">
+        <div class="row">
+            <div>
+                <div class="thumbnail">
+                    <div class="image"><a href="blog"><%= image_tag("home1.jpeg", :alt => "Mil Revolts", :class => "undefined") %></a></div>
+                    <div class="caption">
+                        <div>
+                            <h3>Amants dels revolts</h3>
+                            
+                        </div>
+                        <p class="group"><a href="blog" class="btn btn-default">Preferències</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <div class="image"><a href="sortides"><%= image_tag("home2.jpeg", :alt => "Mil Revolts", :class => "undefined") %></a></div>
+                    <div class="caption">
+                        <div>
+                            <h3>Sortides</h3>
+                            
+                        </div>
+                        <p class="group"><a href="sortides" class="btn btn-default">Veure+</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <div class="image"><a href="media"><%= image_tag("home3.jpeg", :alt => "Mil Revolts",:class => "undefined") %></a></div>
+                    <div class="caption">
+                        <div>
+                            <h3>Galeria Media</h3>
+                            
+                        </div>
+                        <p class="group"><a href="media" class="btn btn-default">Veure+</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="thumbnail">
+                    <div class="image"><a href="blog"><%= image_tag("home4.jpeg", :alt => "Mil Revolts", :class => "undefined") %></a></div>
+                    <div class="caption">
+                        <div>
+                            <h3>EL BLOG</h3>
+                            
+                        </div>
+                        <p class="group"><a href="blog" class="btn btn-default">Anar-hi</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content-2 col-4" id="features1-108" style="background-color: rgb(239, 239, 239);">
+  <div class="ui container">
+	<div class="ui centered stackable doubling grid">
+		<div class="ten wide column">	
+                <h3 class="mbr-header__text">Grup motorista 'Mil Revolts'</h3>
+                <p class="mbr-header__subtext"><b>Surt en moto en grup!</b></p>
+         <div class="mbr-article mbr-article--wysiwyg col-sm-8 col-sm-offset-2">
+         <p>&nbsp; &nbsp; Creat a la primavera d'aquest any 2018, el Grup motorista <b><i>'Mil Revolts'</i></b> ja ha organitzat una dotzena de sortides en moto per Catalunya des de l'àrea de Barcelona.<BR/></p> 
+         <p>&nbsp; &nbsp; Generalment, aquestes sortides són de mig dia o tot un dia, entre setmana i els caps de setmana, cada dimecres i alguns dissabtes, recorrent uns 250-400 kms per carreteres amb molts revolts. Busquem el plaer de la conducció en carreteres de poc trànsit, lentes i revirades, entre bonics paisatges i una bona companyia. Alguns cops fem alguns trams de camins asfaltats, o curtes 'bones' pistes de terra, i si no hi ha mès remei, toquem algun 'eix', autovia o autopista. El ritme és entre 'Touring' i esportiu, marcat per cadascú.  	Desprès de cada tram d'uns 10-30kms, ens agrupem de nou en curtes parades. Al final al llarg del dia normalment fem unes mitjanes d'uns 30-50km/h. Les parades - per esmorzar, per dinar, fer benzina, o simplement per prendre alguna cosa i xerrar - s'adapten al nostre ritme segons el tipus de sortida, la ruta, el cansament i la gent, sempre cercant el consens entre tots. Sempre intentem complir amb les normes de circulació, sobretot  les velocitats al creuar els pobles i també fer el mínim soroll. Els punts de trobada per agrupar-nos abans de sortir, solen ser 2 o 3 - són uns llocs més pròxims/cèntrics per a juntar-nos primerament els que som 'veïns' i anar així ja junts fins al punt final de trobada, ja a les afores de Barcelona. En aquest ens agrupem tots per a sortir plegats cap a les 8 o 9 del matí. </p><BR/>
+         <blockquote><p><em><b>CARACTERÍSTIQUES DE LES SORTIDES I PREFERÈNCIES GENERALS DEL GRUP:</b></em></p>
+                <ul>
+                <li><em>&nbsp; &nbsp; Sortides des de l'àrea de Barcelona</em></li>
+                <li><em>&nbsp; &nbsp; Carreteres revirades</em></li>
+                <li><em>&nbsp; &nbsp; Ritme de 'Touring' a Esportiu </em></li>
+                <li><em>&nbsp; &nbsp; Dimecres i/o dissabtes</em></li>
+                <li><em>&nbsp; &nbsp; De mig o tot un dia amb una durada de 5-12 hores</em></li>
+                <li><em>&nbsp; &nbsp; De tres a deu motos</em></li>
+                <li><em>&nbsp; &nbsp; Parades per fer benzina, esmorzar/dinar o prendre alguna cosa</em></li>
+                <li><em>&nbsp; &nbsp; Reagrupaments sovint desprès de cada tram</em></li>
+                <li><em>&nbsp; &nbsp; En preparació sortides de dos dies.</em></li>
+                <li><em>&nbsp; &nbsp; Retroalimentació permanent mitjançant enquestes de les sortides</em></li>
+                </ul><p><em><br></em></p></blockquote><BR/><BR/></div>
+        </div>
+    </div>
+
+
+
+
+<div class="ui hidden divider"></div>
+	<div class="section four">
+		<div class="ui container">
+			<h1>Les nostres rutes</h1>
+			<!-- Slider Container -->
+			<div class="ui container">
+				<div class="ui centered stackable doubling grid">
+					<div class="ten wide column">
+						<div class="owl-carousel" id="multiple-slider">
+						    <div class="item"><%= image_tag("rutes/20180919_Castelltallat_400x400.jpg", :alt => "Mil Revolts", :class => "undefined") %></div>
+						    <div class="item"><%= image_tag("rutes/Sud 1-2_400x400.jpg", :alt => "Mil Revolts", :class => "undefined") %></div>
+						    <div class="item"><%= image_tag("rutes/01082018 Sortida al Pedraforca_400x400.jpg", :alt => "Mil Revolts", :class => "undefined") %></div>
+						    <div class="item"><%= image_tag("rutes/Prepirineu_400x400.jpg", :alt => "Mil Revolts", :class => "undefined") %></div>
+						    <div class="item"><%= image_tag("rutes/dimecres 4Jl Puigsacalm Montseny_400x400.jpg", :alt => "Mil Revolts", :class => "undefined") %></div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+
+<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="contacts2-90" style="background-color: rgb(60, 60, 60);">  
+
+	<div class="ui container">
+
+    <div class="mbr-section__container container">
+        <div class="mbr-header mbr-header--inline row">
+            <div class="col-sm-4">
+                <h3 class="mbr-header__text">SEGUEIX-NOS</h3>
+            </div>
+            <div class="mbr-social-icons mbr-social-icons--style-1 col-sm-8">
+            	<a class="mbr-social-icons__icon socicon-bg-twitter" title="Twitter" target="_blank" href="https://twitter.com/hastag/milrevolts?src=hash"><i class="socicon socicon-twitter"></i></a> 
+            	
+                <a class="mbr-social-icons__icon socicon-bg-facebook" title="Facebook" target="_blank" href="https://www.facebook.com/pages/milrevolts"><i class="socicon socicon-facebook"></i></a> 
+
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+</section>
+
+

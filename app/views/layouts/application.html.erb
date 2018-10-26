@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render 'layouts/partials/head' %>
+  </head>
+
+  <body style="height:100%;background-color:#ecf0f1;">
+    <%= render 'layouts/partials/topnavbar' %>
+    <%= render 'layouts/partials/flash' %>
+    
+    <%= yield %>
+
+	<%= render 'layouts/partials/footer' %>
+  </body>
+
+</html>

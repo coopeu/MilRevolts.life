@@ -1,0 +1,9 @@
+<% form_for [:admin, @blog], builder: ActiveAdmin::FormBuilder do |f| %>
+  <% f.inputs do %>
+    <% f.input :titol %>
+    <% f.input :foto, as: :file %>
+    <% f.input :contingut %>
+  <% end %>
+    <% f.actions %>
+
+ <% end %>

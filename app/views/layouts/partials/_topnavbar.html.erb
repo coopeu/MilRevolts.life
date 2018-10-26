@@ -1,0 +1,37 @@
+    <div class="ui medium inverted teal menu" style='font-weight:800;'>
+        <div class="left menu">
+            <a href="/homepage" class="icon item logo" id="trigger"><i class="sidebar icon"></i></a>
+      <%= link_to root_path, class: "item" do %><i class='home icon'></i> Inici<% end %>&nbsp;&nbsp;
+            <%= image_tag 'motociclista_bn32.png', class: "menu_icon", alt: 'motoristes milrevolts', size:'20x20', style:'vertical-align: middle; margin-top:24px;' %>
+            <%= link_to 'Motoristes', users_path, :class=>'item' %>           
+          <div class="ui left icon item"><i class="location arrow white icon"></i><a href="/sortides" class="item">Sortides</a>
+          </div>
+          <div class="ui left icon item"><i class="play circle white icon"></i>
+            <a href="/media" class="item">Media</a>
+          </div>
+            <div class="ui left icon item"><i class="motorcycle white icon"></i><a href="/blog" class="mini item">BLOG</a>
+            </div>
+            <!--<a href="/ofertes" class="mini item">Ofertes</a>-->
+            <div class="ui left icon item"><i class="hand peace white icon"></i><%= link_to 'Contacte', new_contacte_path, :class=>'item' %>
+            </div>
+        </div><!-- ./left -->
+       
+      <div class="right menu">
+      <% if user_signed_in? %>
+        <%#= link_to 'New POST &raquo;'.html_safe, new_gig_path, :class=>'item'  %>
+        <%#= image_tag current_user.avatar, style:'50x50' %>
+        <div class="ui left icon item"><i class="user icon red"></i>
+        <%= link_to current_user.email, 
+        edit_user_registration_path, {:class=>'mini item', style:'color:red;font-style:italic;font-weight: bold;'} %>
+      </div>
+       <div class="ui right icon item">
+       <%= link_to 'Surt', destroy_user_session_path, :method => :delete, class:'mini item'%><i class='sign-out alternate white icon'></i>
+        </div>
+    <% else %>
+        <div class='item' style='color:#ffff00;'><b><i><small>Convidat</small></i></b></div>
+        <%= link_to 'Registre Gratis', new_user_registration_path(plan: '1'), :class=>'item' %>
+        <%= link_to 'Entrada', new_user_session_path, :class=>'item' %>
+    <% end %> 
+      </div>
+    </div>
+

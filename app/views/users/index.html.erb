@@ -1,0 +1,68 @@
+<div class='ui container'>
+	<div class="ui three column centered grid">
+	<div class="two wide column"></div>
+	<div class="ten wide column">
+<div><BR/><BR/></div>
+
+<h1 class="ui header teal" style='font-size:24pt; text-shadow: 1px 1px 1px #d2d2d2, 2px 2px 2px #000000;'>Motoristes:&nbsp;</h1>
+
+<div class="ui raised very padded text container segment">
+
+
+<% for user in @users %>
+
+<!--,:order=>'sortides'DESC%>-->
+
+<%# if user_signed_in? %>
+
+
+<% if user.avatar.attached? %>
+&nbsp;<%= image_tag user.avatar, style:'width:50px; height:50px;float:left;' %>&nbsp;
+<% else %>
+&nbsp;<%= image_tag "motorista50bn.png", style:'width:50px; height:50px; float:left;' %> &nbsp;
+<% end %>
+   
+<a href="<%= user_path(user) %>" style='font-weight:800; color:teal;'>
+    <%= user.nom %></a>
+    <BR/><small>&nbsp;&nbsp;&nbsp;&nbsp;<%= user.moto.upcase %>
+    &nbsp;&nbsp;-&nbsp;&nbsp; <%= user.localitat %></small>
+    <%#= user.data_naixement %>
+    <%# if user.data_naixement? %>
+    <%#= ((Time.zone.now - user.data_naixement.to_time) / 1.year.seconds).floor %>
+    <%# end %>
+
+        <p style='text-indent:1em;'>
+        	<i><%#= user.presentacio.truncate_words(12) %></i>
+        </p>
+        <BR/>
+
+
+
+
+<%# end %>
+
+<% end %>
+
+
+</div>
+<div><BR/><BR/></div>
+<!--
+<h4 class="ui header red" style='font-size:10pt;'><i>Perdoneu, aquesta secció està encara en desenvolupament...</i></h3>-->
+<%# if user_signed_in? %>
+<BR/>
+<%# else %>
+<!--
+<div class='item' style='color:red;'><b>C O N V I D A T <i> per a veure la llista de motoristes has de registrar-te o identificar-te!</i></b>
+<BR/>
+<div class='ui container center aligned' style='margin-top: 20px;'>
+<%#= link_to 'Registre', new_user_registration_path, :class=>'ui center aligned button teal' %><%#= link_to 'Entrada', new_user_session_path, :class=>'ui center aligned button teal' %>
+</div>
+</div>
+-->
+<%# end %>
+<div><BR/><BR/></div>
+
+</div>
+<div class="two wide column"></div>
+</div>
+</div>

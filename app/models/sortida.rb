@@ -1,0 +1,2 @@
+class Sortida < ApplicationRecord
+end

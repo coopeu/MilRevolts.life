@@ -1,0 +1,58 @@
+<div class="ui basic segment center aligned">
+     <%= image_tag("MilRevolts400.png", :alt => "Mil Revolts", :class => "mbr-navbar__brand-img mbr-brand__img") %>
+     <BR/><BR/><BR/>  
+</div>
+<div class="ui relaxed equal width grid">
+  <div class="ui row">
+    <div class="ui six wide column"></div>
+      <div class="ui four wide column segment">
+    
+
+      <h2 class="ui center aligned dividing header teal">
+       <i class="signup icon teal"></i>Registra't, crea el teu compte.
+      </h2>
+
+
+
+    <div class='ui form'>    
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<h4 class='ui header red'><i><%= f.error_notification %></i></h4>
+ 
+        <div class="field">
+          <%= f.label :email %>
+          <div class="ui left icon input">
+          <%= f.email_field :email, autofocus: true, placeholder:"El teu correu electrònic, com nom.cognom@email.com"%>
+          <i class="at icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <div class="ui left icon input">
+          <%= f.password_field :password, autocomplete: "off" ,placeholder:"Password", required: true %>
+          <i class="lock icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %>
+          <div class="ui left icon input">
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Password confirmation", required: true %>
+          <i class="lock icon"></i>
+          </div>
+        </div>
+
+
+        <div class="ui basic segment center aligned">
+          <%= f.submit "ENVIA" ,class: "ui submit button teal", style: "margin-top:20px;" %>
+        </div>
+
+<% end %>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<BR/><BR/><BR/>  
+
+</div>
