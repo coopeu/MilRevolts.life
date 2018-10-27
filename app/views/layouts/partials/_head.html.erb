@@ -9,6 +9,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Grup motorista Mil Revolts">
-  <title>Grup motorista Mil Revolts</title>
+  <title>Grup motorista 'Mil Revolts'</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:700,400&amp;subset=cyrillic,latin,greek,vietnamese">
   
+  <%= javascript_include_tag "https://js.stripe.com/v3/", type: 'text' %>
+  <%= tag :meta, name: "stripe_key", content: STRIPE_PUBLIC_KEY %>

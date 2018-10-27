@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_24_135157) do
+ActiveRecord::Schema.define(version: 2018_10_27_192382) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
     t.string "namespace"
@@ -60,9 +60,9 @@ ActiveRecord::Schema.define(version: 2018_10_24_135157) do
   end
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
-    t.string "titol"
-    t.string "foto"
-    t.text "contingut"
+    t.string "titol", null: false
+    t.string "foto", default: "blog", null: false
+    t.text "contingut", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -99,7 +99,7 @@ ActiveRecord::Schema.define(version: 2018_10_24_135157) do
 
   create_table "sortidas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
     t.string "title", null: false
-    t.string "description", null: false
+    t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -111,10 +111,10 @@ ActiveRecord::Schema.define(version: 2018_10_24_135157) do
     t.string "foto_moto", limit: 50, default: "", null: false
     t.string "localitat", limit: 50, default: "Localitat", null: false
     t.date "data_naixement", null: false
-    t.integer "sortides", limit: 5, default: "0"
+    t.integer "sortides", limit: 2, default: 0, null: false
     t.string "mobil", limit: 12, default: "", null: false
     t.text "presentacio", null: false
-    t.integer "plan_id", limit: 5, default: "1"
+    t.integer "plan_id", default: 1, null: false
     t.string "email", null: false
     t.string "encrypted_password", null: false
     t.string "reset_password_token"
@@ -122,6 +122,7 @@ ActiveRecord::Schema.define(version: 2018_10_24_135157) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "stripe_customer_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
