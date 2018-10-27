@@ -65,7 +65,6 @@ $(document).ready(function() {
 	        }
 	    }
 	});
-
 	$('#multiple-slider').owlCarousel({
 	    loop:true,
 	    margin:10,

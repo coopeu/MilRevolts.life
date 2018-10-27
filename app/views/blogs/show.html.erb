@@ -15,5 +15,9 @@
   <%= @blog.contingut %>
 </p>
 
+<BR/>
+<%= link_to 'Subscriure per veure', new_subscription_path, class: 'ui button teal' %>
+<BR/>
+
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>

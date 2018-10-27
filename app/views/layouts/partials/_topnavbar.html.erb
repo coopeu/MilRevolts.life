@@ -28,7 +28,7 @@
        <%= link_to 'Surt', destroy_user_session_path, :method => :delete, class:'mini item'%><i class='sign-out alternate white icon'></i>
         </div>
     <% else %>
-        <div class='item' style='color:#ffff00;'><b><i><small>Convidat</small></i></b></div>
+      <div class="ui left icon item" style='color:orange;'><i class="user icon orange"></i><b><i> Convidat</i></b></div>
         <%= link_to 'Registre Gratis', new_user_registration_path(plan: '1'), :class=>'item' %>
         <%= link_to 'Entrada', new_user_session_path, :class=>'item' %>
     <% end %> 

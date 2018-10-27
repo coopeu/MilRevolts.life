@@ -5,5 +5,13 @@
   <%= @sortida.title %>
 </p>
 
+<p>
+  <strong>Title:</strong>
+  <%= @sortida.description %>
+</p>
+
+<%= link_to 'Subscriure per veure', subscription_path, class='ui button teal' %>
+
+
 <%= link_to 'Edit', edit_sortida_path(@sortida) %> |
 <%= link_to 'Back', sortidas_path %>

@@ -1,19 +1,13 @@
-<div class="ui basic segment center aligned">
-     <%= image_tag("MilRevolts400.png", :alt => "Mil Revolts", :class => "mbr-navbar__brand-img mbr-brand__img") %>
-     <BR/><BR/><BR/>  
-</div>
-
+<div><BR/><BR/></div>
 <div class="ui relaxed equal width grid">
   <div class="ui row">
-    <div class="ui six wide column"></div>
-      <div class="ui four wide column segment">
-    
-
+    <div class="ui four wide column"></div>
+      <div class="ui six wide column segment">  
+     <div class='ui center aligned column'><%= image_tag("milrevoltslife_250h.png", :alt => "Mil Revolts", :class => "ui centered bordered image") %></div>
+     <div><BR/></div>
       <h2 class="ui center aligned dividing header teal">
         <i class="sign in icon"></i>Entra al teu compte
       </h2>
-
-
     <div class='ui form'>    
     <%= simple_form_for(@user, url: session_path(@user)) do |f| %>
         

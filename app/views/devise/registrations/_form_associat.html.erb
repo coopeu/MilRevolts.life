@@ -1,5 +1,5 @@
    <div class='ui form'>    
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html:{id: 'associat_form'})  do |f| %>
 
 <%= hidden_field_tag :plan, params[:plan] %>
 
@@ -130,7 +130,7 @@
     </div>  
 
         <div class="ui basic segment center aligned">
-          <%= f.submit "ENVIA" ,class: "ui submit button teal", style: "margin-top:20px;" %>
+          <%= f.submit "ENVIA" ,class: "ui submit button teal", id: 'submit_associat_form', style: "margin-top:20px;" %>
         </div>
 
 <% end %>
