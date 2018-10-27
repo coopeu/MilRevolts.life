@@ -1,24 +1,15 @@
-# README
+# milrevolts.life
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Portal d'un grup de motoristes aficionats que surten en moto per Catalunya des de l'àrea de Barcelona.
 
-Things you may want to cover:
+* Ruby 2.5.1 on Rails 5.2.1
 
-* Ruby version
+* Apache/Phusion-Passenger
 
-* System dependencies
+* Intel DUAL Xeon E5-2620 8GB RAM Hybrid
 
-* Configuration
+* MySQL/MariaDB-adminer
 
-* Database creation
+* DEBIAN 9
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* SCSS: Semantic-ui
