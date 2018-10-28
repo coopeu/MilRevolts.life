@@ -95,6 +95,14 @@ ActiveRecord::Schema.define(version: 2018_10_27_192382) do
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "nom"
+    t.string "cognom1"
+    t.string "cognom2"
+    t.string "moto"
+    t.string "localitat"
+    t.string "mobil"
+    t.text "description"
   end
 
   create_table "sortidas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|

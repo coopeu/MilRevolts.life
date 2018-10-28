@@ -259,6 +259,14 @@ blockquote {
     content: "»"; }
 
 
+/** Closable flash message */
+.message .closable {
+  margin-left: 20%;
+  margin-right: 20%;
+ }
+
+
+
 
 /** STRIPE
 * The CSS shown here will not be introduced in the Quickstart guide, but

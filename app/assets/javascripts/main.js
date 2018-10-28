@@ -145,3 +145,9 @@ form.addEventListener('submit', function(event) {
     }
   });
 });
+
+// flash message closable
+$ ->
+  $(".message.closable .close.icon").on "click", ->
+    $('.message.closable').fadeOut("slow")
+    false

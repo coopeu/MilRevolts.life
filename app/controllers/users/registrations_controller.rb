@@ -1,5 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
+before_action :select_plan, only: :new
 
 	def create
 		super do |resources|
@@ -14,4 +15,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 		end
 	end	
 
+	private
+
+		def select_plan
+			unless params[:plan] && (params[:plan] == '1' || params[:plan] == '2' || params[:plan] == '3')
+				flash[:notice] = "Si us plau, seleccioneu un pla abans de registrar-vos."
+				redirect_to root_url
+			end
+		end
+			
 end
