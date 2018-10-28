@@ -1,0 +1,9 @@
+class ProfilesController < ApplicationController
+
+
+
+
+
+
+end
+
