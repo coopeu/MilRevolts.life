@@ -1,0 +1,26 @@
+<div><BR/><BR/></div>
+<div class="ui relaxed equal width grid">
+  <div class="ui row">
+    <div class="ui two wide column"></div>
+      <div class="ui twelve wide column segment">  
+     <div class='ui center aligned column'><%= image_tag("milrevoltslife_250h.png", :alt => "Mil Revolts", :class => "ui centered bordered image") %></div>
+     <div><BR/></div>
+      <h2 class="ui center aligned dividing header teal">
+       <i class="signup icon teal"></i>Registra't, crea el teu compte.</h2>
+       <div class="ui inverted segment">
+        <%# if (params[:plan].blank? || params[:plan] == '1') %>
+    		<h3 class="ui center aligned header olive">
+    		<i class="coffee icon olive"></i>Pla BÀSIC</h3>
+        <h4 class="ui center aligned dividing header olive">
+        TOTALMENT GRATIS!<BR/> 
+        <i>Participa en les sortides en moto i al grup de WhatsApp.</i>
+   			</h4></div>
+				<%= render 'form' %>
+
+		</div><!-- six wide -->
+    <div class="ui two wide column"></div>
+	</div><!-- row -->
+</div><!-- grid -->
+
+
+<div><BR/><BR/><BR/><BR/></div>  

@@ -117,7 +117,7 @@ body {
   border: none;
 }
 .ui.vertical.menu.moderns .item.header {
-  background-color: #2cc36b;
+  background-color: teal;
   color: #f7fdff;
   text-transform: uppercase;
 }
@@ -134,7 +134,8 @@ body {
   border: none;
 }
 .ui.segments.moderns .segment.header {
-  background-color: #2cc36b;
+  /*background-color: #2cc36b;*/
+  background-color: teal;
   color: #f7fdff;
   text-transform: uppercase;
   font-size: 14px;
@@ -302,3 +303,136 @@ input:focus,
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+
+/* registration form id='user-avatar' 
+input#user_avatar { height:; } */
+
+
+
+
+/** responnsible topnavbar **/
+
+   .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+ 
+
+    .ui.vertical.stripe {
+      padding: 8em 0;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0;
+    }
+
+    .quote.stripe.segment {
+      padding: 0;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+    }
+
+/* BUTTON COLRS */
+    .ui.color1.button {
+  background-color: #734322;
+  color: #fff;
+}
+
+.ui.color2.button {
+  background-color: #F9A0A0;
+  color: #fff;
+}
+
+.ui.color3.button {
+  background-color: #EA7171;
+  color: #fff;
+}
+
+.ui.color4.button {
+  background-color: #DE627F;
+  color: #fff;
+}
+.ui.color4.item {
+  background-color: #DE627F;
+  color: #fff;
+}
+
+.ui.color5.button {
+  background-color: #F9A0A0;
+  color: #fff;
+}
+.ui.teal5.button {
+  background-color: VAR(--teal12);
+  color: #fff;
+}
+
+
+
+.ui.list>a.item {
+  cursor: pointer;
+  color: #1CB084;
+/*  color: #41C49C;*/
+/*    color: #7CEAD9;*/
+}
+
+.ui.list>a.item:hover{
+  color: #2F8C70;
+}
+
+
+/*******************************
+
+     User Global Variables
+
+*******************************/
+
+
+/* Colors */
+
+/*
+@teal15: #004040;
+@teal10: #008080;
+@teal05: #7fbfbf;
+*/

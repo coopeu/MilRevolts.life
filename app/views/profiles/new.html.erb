@@ -1,0 +1,106 @@
+<h1>Omplir el perfil</h1>
+
+<div class='ui form'>    
+<%= simple_form_for @profile, url: user_profile_path  do |f| %>
+
+<h4 class='ui header red'><i><%= f.error_notification %></i></h4>
+ 
+        <div class="field">
+          <%= f.label :nom %>
+          <div class="ui left icon input">
+          <%= f.text_field :nom, autofocus: true, required: true, placeholder:"Nom, com Josep, Joan,... "%>
+          <i class="user icon"></i>
+          </div>
+        </div>
+        <BR/><BR/>
+        <div class="field">
+          <%= f.label :cognom1 %>
+          <div class="ui left icon input">
+          <%= f.text_field :cognom1, autofocus: true, required: true, placeholder:"Nom, com Josep, Joan,... "%>
+          <i class="user icon"></i>
+          </div>
+        </div>
+        <BR/><BR/>
+                <div class="field">
+          <%= f.label :cognom2 %>
+          <div class="ui left icon input">
+          <%= f.text_field :cognom2, autofocus: true, required: true, placeholder:"Nom, com Josep, Joan,... "%>
+          <i class="user icon"></i>
+          </div>
+        </div>
+        <BR/><BR/>
+         <div class="field">
+          <%= f.label :avatar %>
+          <div class="ui left icon input">
+          <%= f.file_field :avatar, autofocus: true, placeholder:"El teu Avatar"%>
+          <i class="user circle icon"></i>
+          </div>
+        </div>
+        <BR/><BR/>
+        <div class="field">
+          <%= f.label :moto %>
+          <div class="ui left icon input">
+          <%= f.text_field :moto, autofocus: true, required: true, placeholder:"La teva moto, com GSR600, MT01, 390, Z1000,..."%>
+          <i class="motorcycle icon"></i>
+          </div>
+        </div>
+        <BR/><BR/>
+        <div class="field">
+          <%= f.label :foto_de_la_teva_moto %>
+          <div class="ui left icon input">
+          <%= f.file_field :foto_moto, autofocus: true, placeholder:"La foto de la teva moto"%>
+          <i class="motorcycle icon"></i>
+          </div>
+        </div>
+        <BR/><BR/>
+        <div class="field">
+          <%= f.label :localitat %>
+          <div class="ui left icon input">
+          <%= f.text_field :localitat, autofocus: true, required: true, placeholder:"A on resideixes, com BCN, BDN, Gavà, Terrassa,..."%>
+          <i class="map marker alternate icon"></i>
+          </div>
+        </div>
+        <BR/><BR/>
+        <div class="field">
+          <%= f.label :data_de_naixement %>
+          <div class="ui left icon input">
+          <%= f.date_select :data_naixement, autofocus: true, required: true, placeholder:"Any del teu naixement", start_year: DateTime.now.year - 18, end_year: DateTime.now.year - 75 %>
+          </div>
+        </div>
+        <BR/><BR/>
+        <div class="field">
+          <%= f.label :curta_presentació_com_motorista %>
+          <div class="ui left icon input">
+          <%= f.text_area :presentacio, autofocus: true, placeholder:"La teva curta presenatció com motorista" %>
+          </div>
+        </div>
+        <BR/><BR/>
+        <div class="field">
+          <%= f.label :Plà_de_subscripció: %>
+          <%= @User.id %>
+          </div>
+        </div>
+        <BR/><BR/>
+        <div class="field">
+          <%= f.label :Número_de_sortides %>
+          <%= @User.id %>
+          </div>
+        </div>
+        <BR/><BR/>
+         <div class='ui divider teal'></div>
+         <div style='margin-top:20px;'><BR/><BR/></div>
+        <div class="field" style="margin-top:20px;">
+          <%= f.label :mòbil, style: "margin-top:20px;" %>
+          <div class="ui left icon input">
+          <%= f.text_field :mobil, autofocus: true, placeholder:"El número del teu mòbil per unir-te al grup de WhatsApp" %>
+           <i class="phone square icon"></i>
+          </div>
+        </div>
+        <BR/><BR/>
+
+
+<% end %>
+</div>
+
+
+

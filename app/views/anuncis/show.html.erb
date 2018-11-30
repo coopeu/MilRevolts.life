@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @anunci.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @anunci.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @anunci.description %>
+</p>
+
+<%= link_to 'Edit', edit_anunci_path(@anunci) %> |
+<%= link_to 'Back', anuncis_path %>

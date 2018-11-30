@@ -1,3 +1,5 @@
+<% provide(:page_title, "Motorista: #{@user.nom}") %>
+
 <div class='ui container'>
 	<div class="ui three column centered grid">
 
@@ -20,13 +22,13 @@
 <p><%= image_tag @user.avatar, style:'width:200px;float:left;margin:0 30px 10px 0;' %></p>
 <% end %>
 <h2 class='ui header teal'>
-	<%= @user.nom %><BR/>
+	<%= @user.nom %> <%= @user.cognom1 %> <%= @user.cognom2 %><BR/>
 	<%= @user.moto.upcase %><BR/>
 	<%= @user.localitat %><BR/>
 	<%= ((Time.zone.now - @user.data_naixement.to_time) / 1.year.seconds).floor %>
 <BR/><BR/>
 <small>	Número de sortides: <%= @user.sortides %><BR/>
-	Pla: <%= @user.plan_id %><BR/>
+	Pla: <%= Plan.find_by(id: @user.plan_id).name.upcase %><BR/>
 </small>
 </h2>
 </div>

@@ -1,0 +1,97 @@
+<div class='ui container'>
+	<div class="ui three column centered grid">
+	<div class="two wide column"></div>
+	<div class="ten wide column">
+<div><BR/><BR/></div>
+
+<h1 class="ui huge header teal" style='font-size:30pt;'>Volta al Montseny.&nbsp;</h1>
+<h2 class="ui header teal">Dijous 1 de Novembre del 2018</h2>
+<BR/>
+
+<h3 class="ui header teal">Ruta (escurçada per incidències):</h3> 
+<p>BCN > Sant Celoni > Santa Fe > Seva > Montseny > Palautordera > BCN
+</p>
+
+<h3 class="ui header teal">Punt de trobada:</h3> 
+<p>08:00 Aldi Espligues Llobregat.
+<BR/>09:30 Sant Celoni (Plaça del mercat)	
+</p>
+<h3 class="ui header teal">Inscripcions:</h3> 
+<p>Gratuïta i oberta a totes les motos que puguin seguir un ritme normal 'touring'.
+<BR/>Per ordre fins assolir un màxim de 9 (nou) motos. 
+<BR/>Si us plau confirmar aviat per 'guasap/whatapp' o correu al contacte.
+</p> 
+<h3 class="ui header teal">Observacions:</h3>
+<p>Depenent d’eventualitats i d’altres condicionants la ruta i les parades poden ser variades segons les circumstàncies i cercant el consens dels participants.</p>
+<p><BR/></p>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("rutes/20181101_Susqueda.jpg", :alt => "Volta al Montseny", :class => "mbr-figure__img") %></div>
+</figure>
+
+
+<BR/>
+<% if user_signed_in? %>
+<BR/>
+
+<h3 class="ui header teal">Crònica:</h3>
+<p>Van sortir cinc motoristes dissabte: Josep XADV, Josep TRACER, Eduard ENFIELD. Jordi RT i Francesc DUCATI per donar la Volta al Montseny. La caiguda d'una roca sobre el Josep, sense caure, va ocasionar-li un cop fort a la ma i la trencadissa del paramans i de la cua porta-matrícules. Aquest incident va ocasionar el retard i l'escurçada de la sortida, suprimint-se el tram per les Guilleries.</p>
+<div><BR/><BR/></div>
+<BR/>
+<h3 class="ui header teal">Reportatge gràfic:</h3>
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181101_Montseny/2018-11-01 at 11.34.29.jpeg", :alt => "Volta al Montseny", :class => "mbr-figure__img") %></div>
+</figure>
+<p>En Francesc, en Josep Maria, en Jordi i en Josep.<BR/></p> 
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181101_Montseny/2018-11-01 at 11.34.41.jpeg", :alt => "Volta al Montseny", :class => "mbr-figure__img") %></div>
+</figure>
+<p>La roca que es va desprendre i va caure sobre el Josep.<BR/></p> 
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181101_Montseny/2018-11-01 at 11.37.02.jpeg", :alt => "Volta al Montseny", :class => "mbr-figure__img") %></div>
+</figure>
+<p>La pared d'on es va desprendre la roca.<BR/></p>
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181101_Montseny/2018-11-01 at 11.36.47.jpeg", :alt => "Volta al Montseny", :class => "mbr-figure__img") %></div>
+</figure>
+<p>A veure com ho podem arreglar per a continuar! En Jordi, en Francesc d'esquena, en Josep i en Josep.<BR/></p>
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181101_Montseny/2018-11-01 at 12.45.50.jpeg", :alt => "Volta al Montseny", :class => "mbr-figure__img") %></div>
+</figure>
+<p>En Eduard (reporter), en Josep dempeus, en Jordi (meditatiu), en Francesc i en Josep(realment preocupat).<BR/></p>
+<div><%= image_tag("sortides/20181101_Montseny/2018-11-01 at 11.34.22.jpeg", :alt => "Volta al Montseny", :class => "mbr-figure__img") %></div>
+</figure>
+<p>Ja entaulats: Jordi. Francesc, Josep, Josep i Eduard (reporter).<BR/></p>
+
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xOFyB4f3O74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ps6nQZGEOUI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+<p>Gràcies Eduard pel muntatge d'aquests dos vídeos.<BR/></p>
+
+<% else %>
+<BR/>
+<h3 class="ui header blue"><i>Per a llegir la Crònica i veure el Reportatge, cal identificar-se</i></h3>
+<BR/>
+<%= link_to 'Registre', new_user_registration_path, :class=>'ui button teal' %><%= link_to 'Entrada', new_user_session_path, :class=>'ui button teal' %>
+<% end %>
+
+
+
+
+
+
+<div><BR/><BR/></div>
+
+</div>
+<div class="two wide column"></div>
+</div>
+</div>

@@ -1,0 +1,50 @@
+<div class='ui container'>
+	<div class="ui three column centered grid">
+	<div class="three wide column"></div>
+	<div class="ten wide column">
+<div><BR/><BR/></div>
+
+<h1 class="ui huge header teal" style='font-size:30pt;'>Adhesió a la Manifestació PRO-MOTOS a Barcelona.&nbsp;</h1>
+<h2 class="ui header teal">Diumenge 2 de Desembre del 2018</h2>
+<BR/>
+
+<h2 class="ui header green"><i>Lema: La  Moto Solució de Mobilitat</i></h2> 
+<p>
+</p>
+<p>Link: <a href='https://seguridadmotociclistas.org/manifestacion-barcelona-2-de-diciembre-de-2018/'>Lloc Web de la Manifestació </a></p>
+<h3 class="ui header teal">Punt de trobada:</h3> 
+<p>11:00 Cruïlla Avinnguda Litoral amb Selva de Mar (A l'aparcament costat mar entrant pel semàfor).
+</p>
+<h3 class="ui header teal">Accions previstes i temps aprox.:</h3>
+<p>11:00 Trobada
+<BR/>11:30 Participació a la MANI
+<BR/>12:30 Prendre alguna cosa
+<BR/>14:00 Acomiadament per anar a dinar a casa
+</p>
+<p><BR/></p>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("rutes/20181202_Mani.jpg", :alt => "Manifestació PRO-MOTOS a BCN 2018/12/02", :class => "mbr-figure__img") %></div>
+</figure>
+<BR/>
+<BR/>
+<% if user_signed_in? %>
+
+<h3 class="ui header teal"></h3>
+<br/>
+<p></p>
+
+
+
+<div><BR/><BR/></div>
+<% else %>
+<BR/>
+<h3 class="ui header blue">Per inscriure-vos envieu-nos un WhatsApp.  
+<BR/><i>Per a veure més detalls, llegir la Crònica i veure el Reportatge gràfic, cal identificar-se abans.</i></h3>
+<BR/>
+<%= link_to 'Registre', new_user_registration_path, :class=>'ui button teal' %><%= link_to 'Entrada', new_user_session_path, :class=>'ui button teal' %>
+<% end %>
+<div><BR/><BR/></div>
+</div>
+<div class="three wide column"></div>
+</div>
+</div>

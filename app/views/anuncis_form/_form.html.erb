@@ -1,0 +1,39 @@
+<div class='ui form'>    
+<%= simple_form_for(@anunci) do |f| %>
+<h4 class='ui header red'><i>  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %></i></h4>
+        <% if user_signed_in? %> 
+        <%= f.hidden_field :name, :value => current_user.nom %>
+          <% else %>       
+        <div class="field">
+          <BR/>
+          <div class="ui basic segment center aligned">
+          <h3 class="ui header blue"><i>Per a publicar un anunci, cal abans identificar-se</i></h3>
+          <%= link_to 'Registre', new_user_registration_path, :class=>'ui small button teal' %><%= link_to 'Entrada', new_user_session_path, :class=>'ui small button teal' %>
+
+          </div>
+        </div>
+          <% end %>        
+        <BR/><BR/><BR/>
+        <div class="field">
+          <%= f.label :Títol %>
+          <div class="ui left icon input">
+          <%= f.text_field :title, autofocus: true, required: true, placeholder:"Títol"%>
+          <i class="clipboard outline icon"></i>
+          </div>
+        </div>
+        <BR/><BR/><BR/>
+        <div class="field">
+          <%= f.label :Descripció %>
+          <%#= f.text_area :description, autofocus: true, placeholder:"Text de la descripció de l\'anunci", as: :trix_editor %>
+          <%= f.trix_editor :description, autofocus: true, placeholder:"Text de la descripció de l\'anunci", :as => :text, :input_html => { 'rows' => 10 } %>
+        </div>
+        
+        <div><BR/><BR/></div>
+
+        <div class="ui basic segment center aligned">
+          <%= f.submit "PUBLICA" ,class: "ui submit button teal", id: 'submit_member_form', style: "margin-top:20px;" %>
+        </div>
+
+<% end %>
+</div>

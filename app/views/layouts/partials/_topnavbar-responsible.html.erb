@@ -1,0 +1,83 @@
+<!-- Following Menu -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui container">
+
+
+<div class="ui medium inverted teal menu" style='font-weight:800;'>
+   <div class="left menu">
+   <!--<a href="/homepage" class="icon item logo" id="trigger"><i class="bar icon"></i></a>-->
+   <%#= image_tag 'milrevoltslife_125wh.png', class: "menu_icon", alt: 'motoristes milrevolts', size:'125x37', style:'vertical-align:left; margin:17px 40px 15px 15px;' %>
+    <%= link_to root_path, class: "item" do %>
+    <i class='home icon'></i> Inici &nbsp;&nbsp;&nbsp;
+    <% end %>
+    &nbsp;&nbsp;
+    <%= image_tag 'motociclista_bn32.png', class: "menu_icon", alt: 'motoristes milrevolts', size:'20x20', style:'vertical-align:le; margin-top:24px;' %>
+    <%= link_to 'Motoristes', users_path, :class=>'item' %>           
+      <div class="ui left icon item"><i class="location arrow white icon"></i><a href="/sortides" class="item">Sortides</a>
+      </div>
+      <div class="ui left icon item"><i class="play circle white icon"></i><a href="/media" class="item">Media</a>
+      </div>
+        <div class="ui left icon item"><i class="motorcycle white icon"></i><a href="/blog" class="mini item">BLOG</a>
+        </div>
+        <!--<a href="/ofertes" class="mini item">Ofertes</a>-->
+        <div class="ui left icon item"><i class="hand peace white icon"></i><%= link_to 'Contacte', new_contacte_path, :class=>'item' %>
+        </div>
+    </div><!-- ./left -->
+   
+  <div class="right menu">
+<% if user_signed_in? %>
+    <%#= link_to 'New POST &raquo;'.html_safe, new_gig_path, :class=>'item'      <%#= image_tag current_user.avatar, style:'50x50' %>
+    <%#= current_user.nom, {:class=>'mini item',style:'color:white; -style:italic; font-weight: bold;'} %>
+  <div class="ui simple dropdown item">
+  <div class='text'><i class="user left icon"></i><%= current_user.nom %></div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+  <%#= link_to 'Nou perfil', new_user_profile_path(current_user), class: 'item' %>
+  <%#= link_to 'Perfil', edit_user_profile_path(current_user), class: 'item' %>
+  <!--<a href='/users/1/profiles/new' class='item'>Nou Perfil</a>-->
+  <%= link_to 'Compte', edit_user_registration_path, class: 'item' %>
+  <%= link_to 'Surt', destroy_user_session_path, :method => :delete, class:'item'%>
+  </div>      
+  </div>
+<% else %>
+  <div class="ui left icon item"><i class="user icon"></i><b><i>&nbsp; Visitant</i></b></div>
+    <%= link_to 'Registre Gratis', new_user_registration_path(plan: '1'), class: 'item' %>
+    <%= link_to 'Entrada', new_user_session_path, :class=>'item' %>
+<% end %> 
+  </div><!-- ./right menu --> 
+</div><!-- ./inverted menu --> 
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Following Menu -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <a class="active item">Home</a>
+        <a class="item">Work</a>
+        <a class="item">Company</a>
+        <a class="item">Careers</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Home</a>
+  <a class="item">Work</a>
+  <a class="item">Company</a>
+  <a class="item">Careers</a>
+  <a class="item">Login</a>
+  <a class="item">Signup</a>
+</div>
+

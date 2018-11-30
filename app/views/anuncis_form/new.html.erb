@@ -1,0 +1,28 @@
+<div><BR/><BR/></div>
+<div class="ui relaxed equal width grid">
+  <div class="ui row">
+    <div class="ui two wide column"></div>
+      <div class="ui ten wide column segment">  
+      <h2 class="ui center aligned dividing header teal">
+       <i class="sticky note icon teal"></i>Nou Anunci.</h2>
+       <div class="ui inverted segment">
+        <h3 class="ui center aligned header olive">
+        <i class="clipboard icon olive"></i>Tauler Anuncis</h3>
+        <h4 class="ui center aligned dividing header olive">
+        Publica un nou Anunci!<BR/> 
+        <i>Selecciona la categoria</i>
+        </h4></div>
+        <%= render 'form', anunci: @anunci %>
+
+    </div><!-- six wide -->
+    <div class="ui two wide column"></div>
+  </div><!-- row -->
+</div><!-- grid -->
+
+
+<div><BR/><BR/><BR/><BR/></div>  
+
+<div class='ui centered aligned container'>
+<%= link_to 'Tauler d\'Anuncis', anuncis_path, class:'ui crimson small button' %></div>
+
+<div><BR/><BR/><BR/><BR/></div> 

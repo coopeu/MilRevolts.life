@@ -1,34 +1,51 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
 
-  # GET /posts
-  # GET /posts.json
+
+
   def index
-    @posts = Post.all.order('created_at DESC')
+  @categories = Category.all
+
+  if params[:categoria].blank? #    || Post.where(category_id: @categoria_id).count == 0
+  @posts = Post.all.order("created_at DESC")
+  else  
+  @categoria_id = Category.find_by(name: params[:categoria]).id
+  @posts = Post.where(category_id: @categoria_id).order("created_at DESC")
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
+
+  end
+
   def show
+    @comments = @post.comments.all
+    @comment = @post.comments.build
   end
 
-  # GET /posts/new
   def new
     @post = Post.new
+#    @categories = Category.all.map{ |cat| cat.name, cat.id.to_s }
+    @comments = Comment.all
+    @categories =Category.all
+    @comment = Comment.new(post_id: params[:post_id])
   end
 
-  # GET /posts/1/edit
   def edit
+    @post.category_id = params[:category_id]
+    @categories =Category.all
   end
 
-  # POST /posts
-  # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @categories = Category.all
+#    @post = Post.friendly.find(params[:id])
+    @post = Post.new(post_params.merge(user_id: current_user.id))
+
+#    respond_with Post.create(post_params.merge(user_id: current_user.id))
+    #post_params.merge(user_id: current_user.id))
+
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to @post, notice: 'L\'Article ha sigut ben creat.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -37,9 +54,11 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
+
   def update
+#    @post = Post.friendly.find(params[:id])
+    @post.category_id = params[:category_id]
+    
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -51,8 +70,7 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
+
   def destroy
     @post.destroy
     respond_to do |format|
@@ -63,12 +81,12 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @post = Post.find(params[:id])
+    def find_post
+      @post = Post.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:name, :title, :content, images: [])
+      params.require(:post).permit(:id, :name, :title, :foto, :content, :user_id, :category_id, :page, images: [] )
     end
 end

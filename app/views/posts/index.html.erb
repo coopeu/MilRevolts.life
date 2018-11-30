@@ -1,31 +1,105 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <!-- Content area -->
+  <div class="ui container content">
+    <div class="ui stackable doubling grid">
+      <!-- Middle Content -->
+      <div class="twelve wide column">
+        <div align="center">
+          <% if current_user && current_user.id == 1 %>
+          <%= link_to 'Nou article', new_post_path, class: 'ui mini teal05 button' %>
+          <% end %>
+          <div class="ui divider"></div>
+          <div class="ui items">
+            
+<% @posts.each do |post| %>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.name %></td>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+            <div class="item" align="left">
+              <div class="image">
+                <!--<img src="400x400.png"> , size: 400x400 -->
+                <%#= image_tag post.foto %> 
+<% if post.foto.attached? %>
+&nbsp;<%= image_tag post.foto, style:'float:left;' %>&nbsp;
+<% else %>
+&nbsp;<%= image_tag "milrevoltslife_320.png", style:'float:left;' %> 
+<% end %>
+              </div>
+              <div class="content">
+                <h2 class="ui teal header"><%= post.title %></h2>
+                <div class="meta">
+                  <span><i class="calendar icon"></i> <%= post.created_at.strftime("%d-%m-%Y") %> &nbsp; <i class="tag icon"></i><%= post.category.name %>&nbsp; <i class="user icon"></i> <%= post.name %> </span>
+                </div>
+                <div class="description" align="justify">
+                  <p><%= sanitize post.content.truncate(300) %></p>
+                </div>
+                <div class="extra">
+                  <div class='ui right aligned'>
+                  <%= link_to 'Llegeix més...', post, class: 'ui mini teal5 button' %>
+                  </div>
+                </div>
+                <div class="extra">
+                <% if current_user && current_user.id == 1 %>
+<%= link_to 'Edit', edit_post_path(post), class: 'ui mini teal10 left button' %>
+<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'ui mini teal05 left button' %>
+                  <% end %>
+                  </div><!-- ./extra -->
+                </div><!-- ./content -->
+              </div><!-- ./item -->
+            <div class="ui divider"></div>
+            <% end %>
+          </div><!-- ./items -->
 
-<%= link_to 'New Post', new_post_path %>
+        
+
+          <div class="ui divider"></div>
+          <div class="ui buttons">
+            <button class="ui button disabled">Previous</button>
+            <button class="ui blue button">1</button>
+            <button class="ui button">2</button>
+            <button class="ui button">3</button>
+            <button class="ui button">...</button>
+            <button class="ui button">n</button>
+            <button class="ui button">Next</button>
+          </div>
+        </div><!-- ./center -->
+       </div><!-- ./12 wide colums -->
+ 
+      <!-- Right Sidebar -->
+      <div class="four wide column">
+        <div class="ui fluid vertical menu moderns color4">
+          <a href="" class="header teal item">Categoria</a>
+          <% @categories.each do |categoria| %>
+     			<%= link_to categoria.name, posts_path(categoria: categoria.name), class: 'item' %>
+     			<% end %>
+        </div>
+        <div class="ui segments moderns">
+          <div class="ui header segment">
+            Picture Article
+          </div>
+          <div class="ui segment">
+            <div class="owl-carousel" id="single-slider">
+                <div class="item">
+                  <p><img class="ui rounded image" src="assets/img/400x400.png"></p>
+                  <div align="justify">
+                    <div class="ui header">Sortides</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et perspiciatis velit ducimus, reiciendis eius dolor culpa, laudantium modi minus voluptatum eveniet beatae, aperiam totam praesentium aut doloribus nemo minima a.</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <p><img class="ui rounded image" src="assets/img/400x400.png"></p>
+                  <div align="justify">
+                    <div class="ui header">How to make Chat App</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus fugit nesciunt omnis impedit veniam. Inventore praesentium quas, rerum similique, voluptatibus sit dolorum, voluptatum, voluptate fugiat asperiores reprehenderit cupiditate unde quibusdam!</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="ui secondary segment">
+            Other Content
+          </div>
+        </div>
+      </div><!-- ./four wide -->
+    </div><!-- ./grid -->
+  </div>

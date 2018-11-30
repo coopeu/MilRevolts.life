@@ -1,8 +1,9 @@
-<div><BR/><BR/></div>
-<div class="ui relaxed equal width grid">
+<div class="ui grid">
   <div class="ui row">
-    <div class="ui six wide column"></div>
-      <div class="ui four wide column segment">
+    <div class="ui two wide column"></div>      
+    <div><BR/><BR/></div>
+      <div class="ui twelve wide column segment">
+
      <div class='ui center aligned column'><%= image_tag("milrevoltslife_250h.png", :alt => "Mil Revolts", :class => "ui centered bordered image") %></div>
      <div><BR/></div>
 <h2 class='ui center aligned dividing header teal'>
@@ -133,12 +134,9 @@
 
 <h6 class='ui teal center aligned header'><i>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></i></h6>
 
-
-</div>
-</div>
-</div>
-</div>
-
-<BR/><BR/><BR/>  
-
-</div>
+        </div><!-- ./segment -->
+        <BR/><BR/><BR/>  
+      </div><!-- ./twelve -->
+    <div class="ui two wide column"></div>
+  </div><!-- ./grid -->
+</div><!-- ./row -->

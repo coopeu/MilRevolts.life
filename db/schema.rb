@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_27_192382) do
+ActiveRecord::Schema.define(version: 2018_11_27_140812) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
     t.string "namespace"
@@ -59,12 +59,37 @@ ActiveRecord::Schema.define(version: 2018_10_27_192382) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "anuncis", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+    t.string "name", limit: 50
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
     t.string "titol", null: false
     t.string "foto", default: "blog", null: false
     t.text "contingut", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+    t.string "name"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.integer "post_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "contactes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
@@ -74,6 +99,18 @@ ActiveRecord::Schema.define(version: 2018_10_27_192382) do
     t.text "missatge"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "friendly_id_slugs", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, length: { slug: 70, scope: 70 }
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", length: { slug: 140 }
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
   create_table "pages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
@@ -87,22 +124,67 @@ ActiveRecord::Schema.define(version: 2018_10_27_192382) do
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
-    t.string "name"
-    t.string "title"
-    t.text "content"
+    t.bigint "user_id"
+    t.string "name", null: false
+    t.string "title", null: false
+    t.string "foto", default: "''", null: false
+    t.text "content", null: false
+    t.bigint "category_id"
+    t.string "slug", null: false
+    t.string "images", default: "''", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "page"
+    t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+  create_table "posts_all", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name", null: false
+    t.string "title", null: false
+    t.string "foto", default: "''", null: false
+    t.text "content", null: false
+    t.bigint "category_id"
+    t.string "slug", null: false
+    t.string "images", default: "''", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "profiles", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "nom", limit: 50, default: "Nom", null: false
+    t.string "cognom1", limit: 50, default: "", null: false
+    t.string "cognom2", limit: 50, default: "", null: false
+    t.string "avatar", limit: 50, default: "", null: false
+    t.string "moto", limit: 50, default: "Moto", null: false
+    t.string "foto_moto", limit: 50, default: "", null: false
+    t.string "localitat", limit: 50, default: "Localitat", null: false
+    t.date "data_naixement", default: "2000-01-01", null: false
+    t.string "mobil", limit: 12, default: "", null: false
+    t.integer "plan_id", default: 1, null: false
+    t.integer "sortides", limit: 2, default: 0, null: false
+    t.text "presentacio"
+    t.index ["user_id"], name: "user_id", unique: true
+  end
+
+  create_table "profiles_old", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
     t.integer "user_id"
-    t.string "nom"
-    t.string "cognom1"
-    t.string "cognom2"
-    t.string "moto"
-    t.string "localitat"
-    t.string "mobil"
-    t.text "description"
+    t.string "nom", limit: 50
+    t.string "cognom1", limit: 50
+    t.string "cognom2", limit: 50
+    t.string "avatar", limit: 50
+    t.string "moto", limit: 50
+    t.string "foto_moto", limit: 50
+    t.string "localitat", limit: 50
+    t.date "data_naixement"
+    t.string "mobil", limit: 12
+    t.integer "plan_id", limit: 2, default: 1
+    t.integer "sortides", limit: 2, default: 0
+    t.text "presentacio"
   end
 
   create_table "sortidas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
@@ -114,15 +196,17 @@ ActiveRecord::Schema.define(version: 2018_10_27_192382) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
     t.string "nom", limit: 50, default: "Nom", null: false
+    t.string "cognom1", limit: 50, default: ""
+    t.string "cognom2", limit: 50, default: ""
     t.string "avatar", limit: 50, default: "", null: false
     t.string "moto", limit: 50, default: "Moto", null: false
     t.string "foto_moto", limit: 50, default: "", null: false
     t.string "localitat", limit: 50, default: "Localitat", null: false
     t.date "data_naixement", null: false
-    t.integer "sortides", limit: 2, default: 0, null: false
     t.string "mobil", limit: 12, default: "", null: false
-    t.text "presentacio", null: false
     t.integer "plan_id", default: 1, null: false
+    t.integer "sortides", limit: 2, default: 0, null: false
+    t.text "presentacio", null: false
     t.string "email", null: false
     t.string "encrypted_password", null: false
     t.string "reset_password_token"
@@ -135,4 +219,22 @@ ActiveRecord::Schema.define(version: 2018_10_27_192382) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "users_profile", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "nom", limit: 50, default: "Nom", null: false
+    t.string "avatar", limit: 50, default: "", null: false
+    t.string "moto", limit: 50, default: "Moto", null: false
+    t.string "foto_moto", limit: 50, default: "", null: false
+    t.string "localitat", limit: 50, default: "Localitat", null: false
+    t.date "data_naixement", null: false
+    t.string "mobil", limit: 12, default: "", null: false
+    t.integer "plan_id", default: 1, null: false
+    t.integer "sortides", limit: 2, default: 0, null: false
+    t.text "presentacio", null: false
+    t.index ["user_id"], name: "user_id", unique: true
+  end
+
+  add_foreign_key "comments", "users"
+  add_foreign_key "posts", "categories"
+  add_foreign_key "posts", "users"
 end

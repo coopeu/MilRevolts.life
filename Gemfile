@@ -16,11 +16,17 @@ gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
-gem 'semantic-ui-sass'
+#gem 'semantic-ui-sass'
+gem 'less-rails-semantic_ui'
+gem 'autoprefixer-rails'
+gem 'therubyracer'
+
 gem 'devise-semantified', git: 'https://github.com/ajex13/devise-semantified.git'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'figaro'
-
+gem 'trix-rails', require: 'trix'
+gem 'friendly_id'
+#
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

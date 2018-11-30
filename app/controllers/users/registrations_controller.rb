@@ -1,5 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
 
+#before_filter :configure_permitted_parameters, if: :devise_controller?
 before_action :select_plan, only: :new
 
 	def create
@@ -23,5 +24,6 @@ before_action :select_plan, only: :new
 				redirect_to root_url
 			end
 		end
+
 			
 end

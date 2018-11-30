@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :foto %>
+    <%= form.file_field :foto %>
+  </div>
+  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
@@ -23,8 +27,25 @@
 
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.trix_editor :content %>
   </div>
+
+  <div class="field">
+  <%= form.label :category %>
+  <%#= select_tag('categoria', options_from_collection_for_select(@categories, 'id','name'), include_blank: 'Selecciona una categoria' )%>
+  <%#= select_tag('categoria', options_for_select(categories), include_blank: 'Selecciona una categoria') %>
+  <%#= select_tag(:category_id, options_for_select(@categories, 'id','name'), :prompt => ‘Select a category’) %>
+ <%#= select_tag("category", options_from_collection_for_select(@categories, "id", "name"), include_blank: 'Selecciona una categoria') %>
+ <%#= f.hidden_field :category_id %>
+<%= form.collection_select(:category_id, Category.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= form.label :page_url %>
+    <%= form.text_field :page %>
+  </div>
+
+<div>
+<br>
 
   <div class="actions">
     <%= form.submit %>

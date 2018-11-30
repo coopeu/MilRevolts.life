@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Anuncis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anuncis.each do |anunci| %>
+      <tr>
+        <td><%= anunci.name %></td>
+        <td><%= anunci.title %></td>
+        <td><%= anunci.description %></td>
+        <td><%= link_to 'Show', anunci %></td>
+        <td><%= link_to 'Edit', edit_anunci_path(anunci) %></td>
+        <td><%= link_to 'Destroy', anunci, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anunci', new_anunci_path %>

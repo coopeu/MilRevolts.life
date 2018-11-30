@@ -13,5 +13,8 @@ protected
 		devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:nom, :avatar, :moto, :foto_moto, :localitat, :data_naixement, :presentacio, :mobil, :email, :password, :remember_me)}
 	end
 
+#	def after_sign_in_path_for(pages)
+#	  current_user_path
+#	end
 
 end

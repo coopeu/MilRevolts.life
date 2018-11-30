@@ -1,0 +1,48 @@
+
+<div class='ui container'>
+  <div class="ui three column centered grid">
+
+  <div class="two wide column"></div>
+
+  <div class="ten wide column">
+<div><BR/><BR/></div>
+
+<h1 class="ui header teal" style='font-size:25pt; text-shadow: 1px 1px 1px #b2b2b2, 3px 3px 3px #c0c0c0;'>Perfil:&nbsp;</h1>
+
+<div class="ui raised very padded text container segment">
+<%#= link_to image_tag(@user.avatar.variant(resize: "100x100")), @user.avatar %>
+<%#= image_tag @user.avatar.variant(resize: '100x100').processed.service_url %>
+
+<%= form_for current_user do |f| %>
+   <%= f.fields_for :profile do |p| %>
+      <%#= p.text_field ... %>
+      <%= p.text_field :nom %>
+			<%= p.text_field :cognom1 %>
+			<%= p.text_field :cognom2 %>
+			<%= p.text_field :moto %>
+			<%= p.text_field :localitat %>
+			<%= p.text_field :sortides %>
+			<%= p.text_field :plan_id %>
+			<%= p.text_area :presentacio %>
+
+<%#= ((Time.zone.now - @user.data_naixement.to_time) / 1.year.seconds).floor %>
+<%#= Plan.find_by(id: @user.plan_id).name.upcase %><BR/>
+   <% end %>
+   <%= f.submit %>
+<% end %>
+
+
+<div></div>
+<!--<h4 class="ui header red" style='font-size:10pt;'><i>Perdoneu, està encara en  desenvolupament...</i></h4>-->
+</div>
+<div><BR/><BR/><BR/><BR/></div>
+</div><!-- ten wide column -->
+
+<div class="two wide column"></div>
+
+</div><!-- grid -->
+</div><!-- container -->
+
+
+
+

@@ -1,0 +1,86 @@
+<div class='ui container'>
+	<div class="ui three column centered grid">
+	<div class="two wide column"></div>
+	<div class="ten wide column">
+<div><BR/><BR/></div>
+
+<h1 class="ui huge header teal" style='font-size:30pt;'>Volta al Pedraforca.&nbsp;</h1>
+<h2 class="ui header teal">Dissabte 3 de Novembre del 2018</h2>
+<BR/>
+
+<h3 class="ui header teal">Ruta:</h3> 
+<p>BCN > Castellderçol > Moià > Oristà > Pedraforca > Tuixent > Port del Comte > Capolat > Moià > Castellderçol > BCN
+</p>
+
+<h3 class="ui header teal">Punt de trobada:</h3> 
+<p>9:00 E.S. REPSOL Carretera C-1415, Km 17.4, 08430 La Roca del Vallès.
+</p>
+<h3 class="ui header teal">Parades previstes i temps aprox.:</h3>
+<p>11;00 Berga (esmorzar)
+<BR/>14:00 Capolat (dinar)
+</p>
+<h3 class="ui header teal">Inscripcions:</h3> 
+<p>Gratuïta i oberta a totes les motos que puguin seguir un ritme normal 'touring'.
+<BR/>Per ordre fins assolir un màxim de 9 (nou) motos. 
+<BR/>Si us plau confirmar aviat per 'guasap/whatapp' o correu al contacte.
+</p> 
+<h3 class="ui header teal">Observacions:</h3>
+<p>Depenent d’eventualitats i d’altres condicionants la ruta i les parades poden ser variades segons les circumstàncies i cercant el consens dels participants.</p>
+<p><BR/></p>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("rutes/20181103_Pedraforca.jpg", :alt => "Volta al Pedraforca", :class => "mbr-figure__img") %></div>
+</figure>
+
+
+<BR/>
+<% if user_signed_in? %>
+<BR/>
+
+<h3 class="ui header teal">Crònica:</h3>
+<br/>Aquest dissabte 4 motoristes: Paco GS, Marta MONSTER, Xavi GS i Joan Anton MT07 varen fer més de 300 quilòmetres per veure els Prepirineus ben nevats.  
+<div><BR/><BR/></div>
+
+<BR/>
+<h3 class="ui header teal">Reportatge gràfic:</h3>
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181103_Pedraforca/image2.jpeg", :alt => "Sortida al Pedraforca 2018/11/03", :class => "mbr-figure__img") %></div>
+</figure>
+<p>De Tuixent cap a Josa de Cadí al fons, per a anar a fer el coll de Josa (1620m) i baixar a Gòsol.<BR/></p> 
+<BR/>
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181103_Pedraforca/2018-11-05 at 05.54.40.jpeg", :alt => "Volta al Pedraforca 2018/11/03", :class => "mbr-figure__img") %></div>
+</figure>
+<p>Parada al Pedraforca per fer benzina i la imprescindible foto del Pedraforca. Mira que és maco!<BR/></p> 
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181103_Pedraforca/image4.jpeg", :alt => "Volta al Pedraforca 2018/11/03", :class => "mbr-figure__img") %></div>
+</figure>
+<p>La Marta i la seva MONSTER.<BR/></p> 
+<figure class="mbr-figure mbr-figure--wysiwyg mbr-figure--full-width mbr-figure--caption-inside-bottom">
+<div><%= image_tag("sortides/20181103_Pedraforca/image1.jpeg", :alt => "Volta al Pedraforca 2018/11/03", :class => "mbr-figure__img") %></div>
+</figure>
+<p>En Paco i la seva GS.<BR/></p> 
+<div><%= video_tag("sortides/20181103_Pedraforca/2018-11-05 at 06.06.11.mp4", :alt => "Sortida dextrogira al Pedraforca 2018/11/03", :class => "mbr-figure__img", controls: true, autobuffer: true, width: '100%') %></div>
+<BR/>
+<div><%= video_tag("sortides/20181103_Pedraforca/2018-11-05 at 06.05.12.mp4", :alt => "Sortida dextrogira al Pedraforca 2018/11/03", :class => "mbr-figure__img", controls: true, autobuffer: true, width: '100%') %></div>
+<p>Quin dia, quin paisatge i quins revolts!<BR/></p> 
+
+
+<% else %>
+<BR/>
+<h3 class="ui header blue"><i>Per a llegir la Crònica i veure el Reportatge, cal identificar-se</i></h3>
+<BR/>
+<%= link_to 'Registre', new_user_registration_path, :class=>'ui button teal' %><%= link_to 'Entrada', new_user_session_path, :class=>'ui button teal' %>
+<% end %>
+
+
+
+
+
+
+<div><BR/><BR/></div>
+
+</div>
+<div class="two wide column"></div>
+</div>
+</div>

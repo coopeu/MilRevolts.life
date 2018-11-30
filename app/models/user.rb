@@ -8,8 +8,19 @@ class User < ApplicationRecord
  	has_one_attached :foto_moto
 
  	belongs_to :plan
+ 	
+ 	has_one :profile
+  before_create :build_profile
+  accepts_nested_attributes_for :profile
 
- 	attr_accessor :stripe_card_token 
+  has_many :posts,      dependent: :destroy
+  has_many :comments,   dependent: :destroy
+  has_many :anuncis,    dependent: :destroy
+ 	
+  attr_accessor :stripe_card_token 
+	
+#  extend FriendlyId
+#  friendly_id :nom, use: :slugged
 
 
  	def save_with_payment
@@ -20,5 +31,12 @@ class User < ApplicationRecord
  			save!
  		end
  	end
+
+	protected
+	
+	def profile
+	  super || build_profile
+	end 
+	
 
 end

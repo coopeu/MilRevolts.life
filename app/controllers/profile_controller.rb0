@@ -1,0 +1,15 @@
+class ProfileController < ApplicationController
+
+	def new
+		#form for filling out each user their own profile
+		@user =User.find(params[:user_id])
+		@profile =@user.build_profile 
+	end
+
+	def show
+		@user =User.find(params[:user_id])
+	end
+
+
+end
+

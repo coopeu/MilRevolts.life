@@ -46,45 +46,7 @@ $(document).ready(function() {
 		$('.vertical.menu.collapse').toggleClass('slide down');
 	});
 
-	/* First Slider */
-	$('#single-slider').owlCarousel({
-	    loop:true,
-	    margin:10,
-	    nav:false,
-	    autoplay: true,
-      smartSpeed: 4000,
-	    responsive:{
-	        0:{
-	            items:2
-	        },
-	        600:{
-	            items:4
-	        },
-	        1000:{
-	            items:6
-	        }
-	    }
-	});
-	$('#multiple-slider').owlCarousel({
-	    loop:true,
-	    margin:10,
-	    nav:false,
- 	    autoplay: 2000,
-      smartSpeed: 200,
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:3
-	        },
-	        1000:{
-	            items:4
-	        }
-	    }
-	});
 	
-});
 
 
 // STRIPE
@@ -151,3 +113,20 @@ $ ->
   $(".message.closable .close.icon").on "click", ->
     $('.message.closable').fadeOut("slow")
     false
+
+// Semantic-ui dropdown
+$('.ui.dropdown').dropdown();
+
+
+// responsible topnavbar
+
+$(document)
+    .ready(function() {
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;

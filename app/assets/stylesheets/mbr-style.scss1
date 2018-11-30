@@ -1,0 +1,77 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+.mbr-transparent {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.mbr-embedded-video {
+  position: relative;
+}
+.mbr-background-video,
+.mbr-background-video-preview {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.mbr-parallax-background,
+.mbr-background {
+  background-attachment: fixed !important;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+.mbr-hidden-scrollbar .mbr-parallax-background {
+  background-size: auto 130%;
+}
+.mobile .mbr-parallax-background {
+  background-attachment: scroll !important;
+}
+.mbr-background {
+  background-attachment: scroll !important;
+}
+.is-builder .animated {
+  -webkit-animation-name: none !important;
+  animation-name: none !important;
+}
+.msgbox-1 {
+  overflow: hidden;
+  padding: 0 20px;
+  position: relative;
+}
+.msgbox-1 .container {
+  padding: 41px 0 29px;
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 767px) {
+  .msgbox-1 .container {
+    padding: 67px 0 78px;
+    text-align: center;
+  }
+}
+
+
+.content-2 .thumbnail {
+  background: none;
+  border: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.mbr-overlay {
+  background: #222;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
