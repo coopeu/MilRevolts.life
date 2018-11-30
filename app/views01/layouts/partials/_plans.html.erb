@@ -1,0 +1,90 @@
+<div class="ui container">
+  <div class="ui centered three columns stackable grid">
+
+
+		<div class="ui row" style='margin-bottom:15px; margin-top:35px;'>
+    	<h1 class='ui header teal'>Els nostres plans</h1>
+    </div>	
+
+      <div class="column">
+          <div class="ui segments plan">
+              <div class="ui top attached segment olive inverted plan-title">
+                  <span class="plan-ribbon green">Gratis</span>
+                  <span class="ui header"><i class="coffee icon"></i>BÀSIC</span>
+              </div>
+              <div class="ui  attached segment feature">
+                <!--<span class="regular-price">-- €/any</span>-->
+                <div class="amount" style='color:olive;'>0,00 €/any</div>
+              </div>
+              <div class="ui  attached secondary segment feature" style='color:teal;'>
+                <i class="icon teal check"></i>  
+                Participar a les sortides
+              </div>
+              <div class="ui  attached segment feature" style='color:teal;'>
+                <i class="icon teal check"></i>
+                Participar al WhatsApp
+              </div>            
+              <div class="ui bottom attached olive button btn-plan">
+                  <i class="cart icon"></i>
+                  Selecionar Pla: BÀSIC<BR/><BR/>
+                  <%= link_to 'Registreu-vos gratis!', new_user_registration_path(plan: @basic.id), class: 'ui green button' %>
+              </div>
+
+          </div>
+      </div>
+    <div class="column">
+          <div class="ui segments plan principal">
+              <div class="ui top attached segment green inverted plan-title">
+                  <span class="plan-ribbon yellow">POPULAR</span>
+                  <span class="ui header"><i class="copy outline icon"></i>MEMBRE</span>
+              </div>
+              <div class="ui  attached segment feature">
+                <span class="regular-price">10,00 €/any</span>
+                <div class="amount" style='color:green;'>6,00 €/any</div>
+              </div>
+              <div class="ui  attached secondary segment feature">
+                <i class="icon teal check"></i>  
+                PLA BÀSIC
+              </div>
+              <div class="ui  attached segment feature" style='color:teal;'>
+                <i class="icon teal check"></i>
+                Participar al lloc web
+              </div>            
+              <div class="ui bottom attached green button btn-plan">
+                  <i class="cart icon"></i>
+                  Selecionar Pla: MEMBRE<BR/><BR/>
+                  <%= link_to 'Registreu-vos ara!', new_user_registration_path(plan: @membre.id), class: 'ui button yellow' %>
+              </div>
+
+          </div>
+      </div>
+    <div class="column">
+          <div class="ui segments plan">
+              <div class="ui top attached segment teal inverted plan-title">
+                  <span class="plan-ribbon red">MAX</span>
+                  <span class="ui header"><i class="clipboard outline icon"></i>ASSOCIAT</span>
+              </div>
+              <div class="ui attached segment feature">
+                <span class="regular-price">20,00 €/any</span>
+                <div class="amount" style='color:teal;'>12,00 €/any</div>
+              </div>
+              <div class="ui attached secondary segment feature">
+                <i class="icon teal check"></i>  
+                PLA MEMBRE
+              </div>
+              <div class="ui attached segment feature" style='color:teal;'>
+                <i class="icon teal check"></i>
+                 Participar en l'organització
+              </div>            
+              <div class="ui bottom attached teal button btn-plan">
+                  <i class="cart icon"></i>
+                  Selecionar Pla: ASSOCIAT<BR/><BR/>
+                  <%= link_to 'Registreu-vos per a tot!', new_user_registration_path(plan: @associat.id), class: 'ui red button' %>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+<div><BR/><BR/><BR/></div>

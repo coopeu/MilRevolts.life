@@ -1,0 +1,22 @@
+<%= form_with(model: sortida, local: true) do |form| %>
+  <% if sortida.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sortida.errors.count, "error") %> prohibited this sortida from being saved:</h2>
+
+      <ul>
+      <% sortida.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

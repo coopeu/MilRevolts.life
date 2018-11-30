@@ -3,47 +3,37 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-# Use mysql as the database for Active Record
 gem 'mysql2'
-# Use Puma as the app server
 gem 'puma'
-# Use SCSS for stylesheets
 gem 'sass-rails'
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
-#gem 'semantic-ui-sass'
-gem 'less-rails-semantic_ui'
-gem 'autoprefixer-rails'
-gem 'therubyracer'
-
+gem 'semantic-ui-sass'
 gem 'devise-semantified', git: 'https://github.com/ajex13/devise-semantified.git'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'figaro'
-gem 'trix-rails', require: 'trix'
-gem 'friendly_id'
-#
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -58,6 +48,13 @@ gem 'pundit'
 gem 'active_skin'
 
 gem 'mini_magick'
+
+gem 'devise-semantified', git: 'https://github.com/ajex13/devise-semantified.git'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'figaro'
+gem 'trix-rails', require: 'trix'
+gem 'friendly_id'
+
 
 
 group :development do
